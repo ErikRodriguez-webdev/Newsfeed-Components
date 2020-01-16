@@ -131,6 +131,7 @@ function createComponents(title, date, firstP, secondP, thirdP) {
   boxPara1.textContent = firstP;
   boxPara2.textContent = secondP;
   boxPara3.textContent = thirdP;
+  boxSpan.textContent = "Click to Expand Here";
 
   aBox.append(boxTitle);
   aBox.append(boxDate);
@@ -139,8 +140,8 @@ function createComponents(title, date, firstP, secondP, thirdP) {
   aBox.append(boxPara3);
   aBox.append(boxSpan);
 
-  boxSpan.addEventListener("toggle", () => {
-    //aBox.to
+  boxSpan.addEventListener("click", () => {
+    aBox.classList.toggle("article-open");
   });
 
   return aBox;
