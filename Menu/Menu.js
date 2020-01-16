@@ -48,7 +48,7 @@ function createMenu(menuArray) {
 
   menuBox.append(menuList);
 
-  const navMenuButton = document.querySelector(".header");
+  const navMenuButton = document.querySelector(".menu-button");
 
   navMenuButton.addEventListener("click", () => {
     menuBox.classList.toggle("menu--open");
@@ -57,6 +57,6 @@ function createMenu(menuArray) {
   return menuBox;
 }
 
-const navMenuButton = document.querySelector(".header");
+const contain = document.querySelector(".header");
 
-navMenuButton.append(createMenu(menuItems));
+contain.append(createMenu(menuItems));
